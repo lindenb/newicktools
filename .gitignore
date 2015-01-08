@@ -32,3 +32,7 @@
 jeter*
 *~
 taxonomy2newick
+lex.yy.c
+*.tab.h
+*.tab.c
+newick2json
