@@ -36,3 +36,6 @@ lex.yy.c
 *.tab.h
 *.tab.c
 newick2json
+newick2dot
+test*.png
+
