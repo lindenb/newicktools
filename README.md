@@ -5,7 +5,7 @@ Misc tools for the newick format.
 * taxonomy2newick  : converts a NCBI XML Taxonomy to newick.
 * newick2json  : converts newick to json
 * newick2dot  : converts newick to graphviz dot
-
+* newick2xml  : converts newick to xml
 
 ## History
 
@@ -23,7 +23,7 @@ newick2dot (stdin)
 
 taxonomy2newick requires libxml.
 
-newick2json and  newick2dot require GNU flex and bison.
+newick2json, newick2xml and  newick2dot require GNU flex and bison.
 
 ```
 make
@@ -156,6 +156,13 @@ id30 ->  id29
 id31 ->  id30
 }
 ```
+
+##convert to gexf
+
+```
+curl -s 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=taxonomy&retmode=xml&id=9606,10090,9031,7227,562' |./taxonom2newick | ./newick2xml | xsltproc xml2gexf.xslt -
+```
+
 
 ## Author
 

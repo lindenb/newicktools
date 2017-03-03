@@ -37,5 +37,6 @@ lex.yy.c
 *.tab.c
 newick2json
 newick2dot
+newick2xml
 test*.png
 
